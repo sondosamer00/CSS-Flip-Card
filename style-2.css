@@ -1,0 +1,172 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	
+	height: 100vh;
+    background-color: #c19a7e;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+	
+
+}
+
+input{
+	display: none;
+}
+
+.container{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+}
+
+.content{
+	display: flex;
+	width: 80%;
+	height: 430px;
+	
+}
+
+
+.card{ 
+	position: relative;
+	width: 100%;
+	height: 100%;
+	margin: 10px;
+
+}
+
+
+
+.card .front,
+.card .back{
+	 position: absolute;
+	 width: 100%;
+	 height: 100%;
+	 backface-visibility: hidden;
+	 transition: transform 1500ms;
+	 transform-style: preserve-3d;
+	 background-color: #f2eecb;
+	 box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+	 border-radius: 1rem;
+
+}
+
+.card .back{
+	transform: rotateY(180deg);
+	overflow: auto;
+}
+
+
+#btnControl, #btnControl2, #btnControl3{
+	visibility: hidden;
+	
+}
+
+#btnControl:checked ~ .front, #btnControl2:checked ~ .front, #btnControl3:checked ~ .front{
+	transform: rotateY(-180deg);
+	
+}
+
+#btnControl:checked ~ .back, #btnControl2:checked ~ .back, #btnControl3:checked ~ .back{
+	transform: rotateY(0deg);
+
+}
+
+	
+.btn{
+	grid-row: -1;
+	cursor: pointer;
+	display: block;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+}
+
+.btn-back{
+	cursor: pointer;
+	
+}
+
+.image{
+	width: 100%;
+	border-top-left-radius: 1rem;
+	border-top-right-radius: 1rem;
+}
+
+.offers{
+	font-size: 1em;
+	color: #22222299;
+	text-align: justify;
+	line-height: 170%;
+	margin-top: 1em;
+}
+
+
+
+.front-info{
+	padding: 1.5em;
+	padding-bottom: 6em;
+}
+
+.front-info > h1{
+	font-size: 1.5em;
+	color: #222222;
+
+}
+
+.back-info{
+	color: #7A685C ;
+	font-weight: bold;
+	
+}
+
+.location{
+	margin-top: 10px;
+	margin-left: 15px;
+}
+
+.Price{
+	margin-top: -15px;
+	margin-left: 85%;
+}
+
+.description{
+	text-align: center;
+	line-height: 170%;
+	margin: 10px;
+	padding-top: 1rem;
+	
+}
+
+.exp{
+	text-align: justify;
+	line-height: 170%;
+	margin: 10px;
+	padding-top: 2rem;
+
+}
+
+.rating{
+	text-align: center;
+	margin: 20px;
+	padding-top: 1.5rem;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+}
+
+
+
+
+
+
+
